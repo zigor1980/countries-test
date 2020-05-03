@@ -1,0 +1,5 @@
+export default {
+  GET_CODES: 'codes/GET_CODES',
+  GET_CODES_SUCCESS: 'codes/GET_CODES_SUCCESS',
+  GET_CODES_FAILED: 'codes/GET_CODES_FAILED',
+};
