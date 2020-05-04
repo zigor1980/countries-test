@@ -13,7 +13,10 @@ function DesktopLayout({ children }) {
 }
 
 DesktopLayout.propTypes = {
-  children: PropTypes.oneOf([PropTypes.arrayOf(PropTypes.node), PropTypes.node]),
+  children: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.node,
+  ]),
 };
 
 export default DesktopLayout;

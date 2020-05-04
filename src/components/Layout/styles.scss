@@ -1,0 +1,15 @@
+.layout-desktop {
+    width: 100%;
+    background-color: #f5f5ff;
+
+    &__content {
+        display: flex;
+        flex-flow: column;
+        width: 100%;
+        background-color: #ffffff;
+        box-shadow: 0 0 1px 1px #cccccc;
+        max-width: 1024px;
+        height: 100vh;
+        margin: auto;
+    }
+}

@@ -1,11 +1,16 @@
 import axios from 'axios';
+import { setupCache } from 'axios-cache-adapter';
 
+const cache = setupCache({
+  maxAge: 15 * 60 * 1000,
+});
 
 const apiClient = axios.create({
   baseURL: 'https://restcountries.eu/rest/v2',
   headers: {
     'Content-Type': 'application/json',
   },
+  adapter: cache.adapter,
 });
 
 export default {

@@ -1,0 +1,16 @@
+.locale-switcher {
+    &__button {
+        display: inline-block;
+        padding: 5px;
+        margin: 5px;
+        line-height: 1;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color, color ease .1s;
+
+        &:hover, &_active {
+            background-color: #1890ff;
+            color: #ffffff;
+        }
+    }
+}

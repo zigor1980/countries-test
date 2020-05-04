@@ -1,0 +1,23 @@
+.search-panel {
+    padding: 15px;
+    flex: 0 0 auto;
+}
+
+.search-form {
+    display: flex;
+    flex-flow: row;
+
+    &__controls {
+        flex: 1 1 100%;
+
+        &_checkbox {
+            flex: 0 0 auto;
+            margin-left: 20px;
+        }
+    }
+
+    &__submit {
+        flex: 0 0 auto;
+        margin-left: 20px;
+    }
+}

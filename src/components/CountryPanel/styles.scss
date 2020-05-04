@@ -1,0 +1,9 @@
+.country-panel {
+    overflow: hidden;
+    position: relative;
+    flex: 1 1 100%;
+
+    .animated-pan {
+        transition: transform ease .3s;
+    }
+}

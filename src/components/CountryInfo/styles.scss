@@ -1,0 +1,42 @@
+.country {
+    &-description {
+        margin-top: 10px;
+        width: 100%;
+        text-align: left;
+
+        &__name {
+            font-weight: 600;
+        }
+    }
+
+    &-info {
+        box-sizing: border-box;
+        padding: 0 10px;
+        text-align: center;
+    
+        & > p {
+            margin: 0;
+        }
+    
+        &__image {
+            width: 80%;
+            margin: 5px auto 20px;
+            box-shadow: 0 0 5px 0px #cccccc;
+    
+            & > img {
+                width: 100%;
+            }
+        }
+    
+    
+        &__property-name {
+            font-weight: 600;
+        }
+    
+        &__name {
+            font-size: 24px;
+            font-weight: 600;
+            text-align: center;
+        }
+    }
+}

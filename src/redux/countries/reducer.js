@@ -3,7 +3,8 @@ import types from './constants';
 const DEFAULT_STATE = {
   isLoading: false,
   error: null,
-  data: [],
+  current: null,
+  data: {},
 };
 
 export default function reducer(state = DEFAULT_STATE, { type, payload = {} }) {
@@ -12,7 +13,14 @@ export default function reducer(state = DEFAULT_STATE, { type, payload = {} }) {
       return {
         ...state,
         isLoading: true,
+        current: null,
         error: null,
+      };
+    }
+    case types.SET_CURRENT_COUNTRY: {
+      return {
+        ...state,
+        current: payload.code,
       };
     }
     case types.SEARCH_COUNTRIES_SUCCESS: {
@@ -31,6 +39,8 @@ export default function reducer(state = DEFAULT_STATE, { type, payload = {} }) {
         ...state,
         isLoading: false,
         error,
+        current: null,
+        data: {},
       };
     }
     default: return state;

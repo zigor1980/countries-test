@@ -5,15 +5,14 @@ import './styles.scss';
 import App from 'containers/App';
 import createStore from 'redux/createStore';
 import * as serviceWorker from './serviceWorker';
+import './i18n';
 
 const store = createStore();
 
 ReactDOM.render(
-  <React.StrictMode>
-    <Provider store={store}>
-      <App />
-    </Provider>
-  </React.StrictMode>,
+  <Provider store={store}>
+    <App />
+  </Provider>,
   document.getElementById('root'),
 );
 

@@ -1,7 +1,15 @@
 import { connect } from 'react-redux';
 import { getAvailableCodes } from 'redux/codes/actions';
-import Component from './App';
+import { searchCountries } from 'redux/countries/actions';
+import { setLocale } from 'redux/locale/actions';
+import App from './App';
 
-export default connect(null, {
+export default connect((state) => ({
+  codes: state.codes.data,
+  countries: state.countries,
+  locale: state.locale.lang,
+}), {
   getAvailableCodes,
-})(Component);
+  searchCountries,
+  setLocale,
+})(App);
